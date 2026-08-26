@@ -1,0 +1,56 @@
+.App {
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: -apple-system, sans-serif;
+  padding: 0 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.sort-buttons {
+  margin-bottom: 20px;
+}
+
+.sort-buttons button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: #f4f4f4;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sort-buttons button:hover {
+  background: #e8e8e8;
+}
+
+.account-list {
+  display: grid;
+  gap: 12px;
+}
+
+.account-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.account-card h3 {
+  margin: 0 0 8px 0;
+}
+
+.empty-state {
+  color: #888;
+  text-align: center;
+  margin-top: 40px;
+}

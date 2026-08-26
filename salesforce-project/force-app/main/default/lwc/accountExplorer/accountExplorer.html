@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Account Explorer" icon-name="standard:account">
+        <div class="slds-p-horizontal_medium">
+            <lightning-input
+                type="search"
+                label="Search accounts"
+                placeholder="Search by name or industry..."
+                onchange={handleSearch}>
+            </lightning-input>
+        </div>
+
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading accounts" size="medium"></lightning-spinner>
+        </template>
+
+        <template if:true={showEmptyState}>
+            <div class="slds-p-around_medium slds-text-align_center slds-text-color_weak">
+                No accounts found.
+            </div>
+        </template>
+
+        <template if:true={hasAccounts}>
+            <table class="slds-table slds-table_bordered slds-table_striped">
+                <thead>
+                    <tr>
+                        <th data-field="Name" onclick={handleSort} style="cursor:pointer">Name</th>
+                        <th data-field="Industry" onclick={handleSort} style="cursor:pointer">Industry</th>
+                        <th data-field="Phone" onclick={handleSort} style="cursor:pointer">Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={filteredAccounts} for:item="acc">
+                        <tr key={acc.Id}>
+                            <td>{acc.Name}</td>
+                            <td>{acc.Industry}</td>
+                            <td>{acc.Phone}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+    </lightning-card>
+</template>
