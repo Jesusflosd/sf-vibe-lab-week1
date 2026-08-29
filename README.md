@@ -66,3 +66,8 @@ I built two separate applications for this sprint.
 The first is an **Account Explorer LWC**, deployed inside my Salesforce sandbox. It uses real Account records from my org and displays them with the Name, Industry, and Phone fields. An Apex controller (`AccountExplorerController`) queries the Account records, and the Lightning Web Component (`accountExplorer`) renders them in a table. The component includes a search bar that filters by Name or Industry, sorting by clicking the column headers, a loading spinner while the data is being fetched, and an empty state message when a search returns no matches.
 
 The second is a **React Account Explorer**, built to run entirely locally. It follows the same account-browsing idea as the LWC, but instead of connecting to Salesforce, it reads account data from a local `Account_Sample_Data.json` file. It runs with `npm start` and includes a search option that filters by Name or Industry, plus a sort option that can reorder the list by Name or Industry.
+
+
+## Demo Video
+
+A full walkthrough covering the development environment, the connected Salesforce project, the Account Explorer LWC, and the React Account Explorer app: [Watch the demo video] https://drive.google.com/file/d/1_AbFHBTThDDgBwCi2c5wxYyv-IAn7ct0/view?usp=sharing
